@@ -1,14 +1,27 @@
-**Cyclistic Analysis (bike-share program)**
-In this project I am work as a junior data analyst at Cyclistic, a bike-sharing company in Chicago. My task is to analyze how casual riders and annual members use Cyclistic bikes differently. Based on this, my team will develop a marketing strategy to convert casual riders into annual members. 
+# Cyclistic Analysis (bike-share program) 🚴
+## Project Overview
+This project is part of the Google Data Analytics Professional Certificate capstone and focuses on analyzing data from Cyclistic, a fictional bike-share company in Chicago. The goal is to explore how casual riders and annual members use the bike-share system differently, in order to help the company design a marketing strategy to convert casual riders into annual members.
 
-A bike-share program that features more than 5,800 bicycles and 600 docking stations. Cyclistic sets itself
-apart by also offering reclining bikes, hand tricycles, and cargo bikes, making bike-share more inclusive to people with
-disabilities and riders who can’t use a standard two-wheeled bike. The majority of riders opt for traditional bikes; about
-8% of riders use the assistive options. Cyclistic users are more likely to ride for leisure, but about 30% use them to
-commute to work each day.
+## Business Task
+The director of marketing at Cyclistic has identified that maximizing the number of annual memberships is critical to the company’s future growth. The key objective is to understand the differences in bike usage patterns between casual riders (those who purchase single-ride or full-day passes) and annual members. Insights from this analysis will inform strategies aimed at encouraging casual riders to become annual members.
 
-A team of data analysts who are responsible for collecting, analyzing, and
-reporting data that helps guide Cyclistic marketing strategy.
+## Key Objectives
+**1. Analyze User Behavior:** Identify how casual riders and annual members use Cyclistic bikes differently.
+**2. Support Marketing Strategy:** Use the findings to design targeted marketing campaigns that encourage casual riders to become members.
+**3. Deliver Data-Backed Recommendations:** Ensure that the marketing strategies are backed by solid data and visualizations for executive approval.
+## Data Source
+The analysis uses 12 months of historical trip data from Cyclistic, which includes information on trip duration, start and end times, bike types, and user categories (casual or member). The data is anonymized to protect rider privacy and was provided under a license from Motivate International Inc..
 
-**Ask**
-2.  
+## Ask
+Three questions will guide the future marketing program:
+1. How do annual members and casual riders use Cyclistic bikes differently?
+2. Why would casual riders buy Cyclistic annual memberships?
+3. How can Cyclistic use digital media to influence casual riders to become members?
+
+The director of marketing has assigned me the first question to answer: How do annual members and casual riders use Cyclistic bikes
+differently?
+## Prepare
+## Process
+## Analyze
+## Share
+## Act
