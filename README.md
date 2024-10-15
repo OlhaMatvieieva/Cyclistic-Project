@@ -31,7 +31,8 @@ I will use Cyclistic’s historical trip data from September 2023 till August 20
 BigQuery is used to merge the different datasets into a single dataset and to perform data cleaning. Microsoft Excel has a row limit of 1,048,576, which makes it unsuitable for handling large datasets. Since the Cyclistic dataset contains over 5.6 million rows, a platform like BigQuery, which can manage vast amounts of data, is necessary.
 
 ### Joining the data
- SQL Query: Join
+12 CSV files are uploaded as tables into the 'Cyclistic' dataset. A new table named "join_data" is then created, containing 5,699,639 rows of data representing the entire year.
+ [SQL Query: Join](https://github.com/OlhaMatvieieva/Cyclistic-project/blob/main/SQL%20Query%3A%20JOIN) 
 ## Analyze
 ## Share
 ## Act
