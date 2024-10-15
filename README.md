@@ -32,7 +32,7 @@ BigQuery is used to merge the different datasets into a single dataset and to pe
 
 ### Joining the data
 12 CSV files are uploaded as tables into the 'Cyclistic' dataset. A new table named "join_data" is then created, containing 5,699,639 rows of data representing the entire year.
- [SQL Query: Join](https://github.com/OlhaMatvieieva/Cyclistic-project/blob/main/SQL%20Query%3A%20JOIN) 
+ [SQL Query: Join](https://github.com/OlhaMatvieieva/Cyclistic-project/blob/main/JOIN.sql) 
 ## Analyze
 ## Share
 ## Act
