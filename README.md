@@ -35,8 +35,9 @@ BigQuery is used to merge the different datasets into a single dataset and to pe
  [SQL Query: Join](https://github.com/OlhaMatvieieva/Cyclistic-project/blob/main/JOIN.sql) 
 
 ### Cleaning the data
+SQL Query: Data Cleaning
 1. Checking null values in all columns
-   ![image](https://github.com/user-attachments/assets/e2b2dbaf-7a5c-46fc-aaf6-ffbe15627ffe)
+ ![image](https://github.com/user-attachments/assets/e2b2dbaf-7a5c-46fc-aaf6-ffbe15627ffe)
 At this table you can see that here was missing values in start/end station names, start/end station id, end latitude, end longitude
 
 2. Checking for duplicate rows ride_id column, as a primary key it has to be unique
