@@ -31,19 +31,18 @@ I will use Cyclistic’s historical trip data from September 2023 till August 20
 BigQuery is used to merge the different datasets into a single dataset and to perform data cleaning. Microsoft Excel has a row limit of 1,048,576, which makes it unsuitable for handling large datasets. Since the Cyclistic dataset contains over 5.6 million rows, a platform like BigQuery, which can manage vast amounts of data, is necessary.
 
 ### Joining the data
+ [SQL Query: Join](https://github.com/OlhaMatvieieva/Cyclistic-project/blob/main/JOIN.sql)
 12 CSV files are uploaded as tables into the 'Cyclistic' dataset. A new table named "join_data" is then created, containing 5,699,639 rows of data representing the entire year.
- [SQL Query: Join](https://github.com/OlhaMatvieieva/Cyclistic-project/blob/main/JOIN.sql) 
+ 
 
 ### Cleaning the data
-SQL Query: Data Cleaning
+[SQL Query: Data Cleaning](https://github.com/OlhaMatvieieva/Cyclistic-SQL-Project/blob/main/Data%20Cleaning.sql)
 1. Checking null values in all columns
  ![image](https://github.com/user-attachments/assets/e2b2dbaf-7a5c-46fc-aaf6-ffbe15627ffe)
 At this table you can see that here was missing values in start/end station names, start/end station id, end latitude, end longitude
 
 2. Checking for duplicate rows ride_id column, as a primary key it has to be unique
-   Here you can see that column has duplicates which needs to be removed
-   ![image](https://github.com/user-attachments/assets/3d0f2d82-5ae9-422f-9e38-124318fb139c)
-
+  It has 211 duplicate rows which needs to be removed
 ## Analyze
 ## Share
 ## Act
