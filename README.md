@@ -25,24 +25,30 @@ The director of marketing has assigned me the first question to answer: How do a
 differently?
 
 ## Prepare
-I will use Cyclistic’s historical trip data from September 2023 till August 2024 to analyze and identify trends. The dataset consists of 12 files, each following the naming format YYYYMM-divvy-tripdata. Each file contains data for one month and includes details such as the ride ID, bike type, start and end times, start and end stations, start and end locations, and whether the rider is a member or not. The corresponding column names are: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, and member_casual.
+[Data Source: divvy-tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html)
+
+I will use Cyclistic’s historical trip data from September 2023 till August 2024 to analyze and identify trends. The dataset consists of 12 files, each following the naming format YYYYMM-divvy-tripdata. Each file contains data for one month and includes details such as the ride ID, bike type, start and end times, start and end stations, start and end locations, and whether the rider is a member or not. The corresponding column names are: *ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, and member_casual*.
 
 ## Process
 BigQuery is used to merge the different datasets into a single dataset and to perform data cleaning. Microsoft Excel has a row limit of 1,048,576, which makes it unsuitable for handling large datasets. Since the Cyclistic dataset contains over 5.6 million rows, a platform like BigQuery, which can manage vast amounts of data, is necessary.
 
-### Joining the data
- [SQL Query: Join](https://github.com/OlhaMatvieieva/Cyclistic-project/blob/main/JOIN.sql)
+1.[Data Combining](https://github.com/OlhaMatvieieva/Cyclistic-project/blob/main/JOIN.sql)
+
+2.[Data Exploration](https://github.com/OlhaMatvieieva/Cyclistic-SQL-Project/blob/main/Data%20Exploration.sql)
+
+### Data Combining
 12 CSV files are uploaded as tables into the 'Cyclistic' dataset. A new table named "join_data" is then created, containing 5,699,639 rows of data representing the entire year.
  
 
-### Cleaning the data
-[SQL Query: Data Cleaning](https://github.com/OlhaMatvieieva/Cyclistic-SQL-Project/blob/main/Data%20Cleaning.sql)
-1. Checking null values in all columns
- ![image](https://github.com/user-attachments/assets/e2b2dbaf-7a5c-46fc-aaf6-ffbe15627ffe)
-At this table you can see that here was missing values in start/end station names, start/end station id, end latitude, end longitude
+### Data Exploration
 
-2. Checking for duplicate rows ride_id column, as a primary key it has to be unique
-  It has 211 duplicate rows which needs to be removed
+1. Checking null values in all columns. Here was missing values in *start/end station names, start/end station id, end latitude, end longitude*
+2. Checking for duplicate rows *ride_id* column, as a primary key it has to be unique. It has 211 duplicate rows which needs to be removed
+3. The *ride_id* is consistent with 16 characters and no need to be cleaned
+4. There are two unique types of bike: electric bike and classic bike
+5. Checking *started_at, ended_at* ride duration which are less one minute and more than one day, there are 244250 rows which has to be remowed
+6. Null rows from columns *start_station_name,	start_station_id,	end_station_name,	end_station_id, end_lat,	end_lng*, in total 1,982,356 were determined and has to be removed. The columns *start_station_id* and *end_station_id* should be removed, as they do not contribute to the analysis of our current problem. While the longitude and latitude columns may not be directly relevant for analysis, they can be useful for map visualization
+7. *member_casual* column has two unique values as member or casual rider
 ## Analyze
 ## Share
 ## Act
