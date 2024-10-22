@@ -32,7 +32,7 @@ I will use Cyclistic’s historical trip data from September 2023 till August 20
 ## Process
 BigQuery is used to merge the different datasets into a single dataset and to perform data cleaning. Microsoft Excel has a row limit of 1,048,576, which makes it unsuitable for handling large datasets. Since the Cyclistic dataset contains over 5.6 million rows, a platform like BigQuery, which can manage vast amounts of data, is necessary.
 
-1.[Data Combining](https://github.com/OlhaMatvieieva/Cyclistic-project/blob/main/JOIN.sql)
+1.[Data Combining](https://github.com/OlhaMatvieieva/Cyclistic-Project/blob/main/Data%20Combining.sql)
 
 2.[Data Exploration](https://github.com/OlhaMatvieieva/Cyclistic-SQL-Project/blob/main/Data%20Exploration.sql)
 
