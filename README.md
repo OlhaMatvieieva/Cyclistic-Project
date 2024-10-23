@@ -36,6 +36,8 @@ BigQuery is used to merge the different datasets into a single dataset and to pe
 
 2.[Data Exploration](https://github.com/OlhaMatvieieva/Cyclistic-SQL-Project/blob/main/Data%20Exploration.sql)
 
+3.[Data Cleaning](https://github.com/OlhaMatvieieva/Cyclistic-Project/blob/main/Data%20Cleaning.sql)
+
 ### Data Combining
 12 CSV files are uploaded as tables into the 'Cyclistic' dataset. A new table named "join_data" is then created, containing 5,699,639 rows of data representing the entire year.
  
@@ -49,6 +51,16 @@ BigQuery is used to merge the different datasets into a single dataset and to pe
 5. Checking *started_at, ended_at* ride duration which are less one minute and more than one day, there are 244250 rows which has to be remowed
 6. Null rows from columns *start_station_name,	start_station_id,	end_station_name,	end_station_id, end_lat,	end_lng*, in total 1,982,356 were determined and has to be removed. The columns *start_station_id* and *end_station_id* should be removed, as they do not contribute to the analysis of our current problem. While the longitude and latitude columns may not be directly relevant for analysis, they can be useful for map visualization
 7. *member_casual* column has two unique values as member or casual rider
+
+### Data Cleaning
+
+After data exploration I have to clean the dataset from:
+1. Null values in columns *start_station_name,	start_station_id,	end_station_name,	end_station_id, end_lat,	end_lng*
+2. Duplicates from *ride_id*
+3. Rows from columns *started_at, ended_at* ride duration which are less one minute and more than one day
+4. 3 more columns ride_length for duration of the trip, day_of_week and month are added
+
+In total, 4,070,022 rows were returned, which means 1,629,617 rows were removed
 ## Analyze
 ## Share
 ## Act
