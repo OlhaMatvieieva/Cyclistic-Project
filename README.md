@@ -62,5 +62,14 @@ After data exploration I have to clean the dataset from:
 
 In total, 4,070,022 rows were returned, which means 1,629,617 rows were removed
 ## Analyze
+
+[Data Analysis](https://github.com/OlhaMatvieieva/Cyclistic-Project/blob/main/Data%20Analysis.sql)
+[Data Visualization]()
+The main question for analysis is: *How do annual members and casual riders use Cyclistic bikes differently?*
+The data has been properly stored and is now ready for analysis. I queried several relevant tables and created visualizations in Power BI
+
+### Total rides
+
+
 ## Share
 ## Act
