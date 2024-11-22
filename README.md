@@ -64,11 +64,42 @@ In total, 4,070,022 rows were returned, which means 1,629,617 rows were removed
 ## Analyze
 
 [Data Analysis](https://github.com/OlhaMatvieieva/Cyclistic-Project/blob/main/Data%20Analysis.sql)
+
 [Data Visualization]()
+
 The main question for analysis is: *How do annual members and casual riders use Cyclistic bikes differently?*
+
 The data has been properly stored and is now ready for analysis. I queried several relevant tables and created visualizations in Power BI
 
-### Total rides
+### Total rides in 2024
+![image](https://github.com/user-attachments/assets/8efdc446-10cb-4c0f-984d-d445609a1f7b)
+
+The figure shows the total number of rides in 2024. Members (64%) shows us more activity instead from casual riders (36%)
+
+### Types of bikes
+![image](https://github.com/user-attachments/assets/d08a8b6f-7d39-4c48-963a-c6c7f7d88cbd)
+
+There are two types of bicycles: classic and electric bikes. On the chart displayed how members and casual riders used bikes. Members and casual riders more often uses classic bikes 2.736.095 rides when on electic bikes only 1.333.927 rides
+
+### Total rides by period
+![image](https://github.com/user-attachments/assets/5c03b321-f24b-4cb6-a6ee-89f49c96b789)
+
+Next the number of trips distributed by the months, days of the week and hours of the day are examined.
+
+Months: Monthly trip patterns for casual riders and members are quite similar, with both groups taking more trips during the spring and summer months and fewer in the winter. The difference in trip numbers between the two groups narrows most significantly in July, during the summer.
+
+Days of the Week: Casual riders tend to take more trips on weekends, while members show a contrasting pattern, with fewer trips on weekends compared to weekdays.
+
+Hours of the Day: Members display two distinct peaks in their trip activity: one in the early morning between 6 AM and 8 AM, and another in the evening from 4 PM to 8 PM. In contrast, trips by casual riders steadily increase throughout the day, peaking in the evening before declining later at night.
+
+Based on these observations, it can be inferred that members likely use bikes primarily for commuting to and from work on weekdays, while casual riders tend to use bikes throughout the day, especially on weekends, likely for leisure activities. Both groups show peak activity during the spring and summer seasons.
+
+
+
+
+
+
+
 
 
 ## Share
