@@ -1,6 +1,8 @@
 # Cyclistic Analysis (bike-share program) 🚴
 ## Project Overview
 This project is part of the Google Data Analytics Professional Certificate capstone and focuses on analyzing data from Cyclistic, a fictional bike-share company in Chicago. The goal is to explore how casual riders and annual members use the bike-share system differently, in order to help the company design a marketing strategy to convert casual riders into annual members.
+![image](https://github.com/user-attachments/assets/7c929073-c9dd-4496-8ede-a5ed2321dd96)
+[View dashboard](https://app.powerbi.com/view?r=eyJrIjoiMjM0NjgxNzktODNlNS00YzgxLWI0MzItYzVkNWFjZDVmZDkzIiwidCI6ImFmNDAxOTMwLTYyZWUtNDIwMC05NDYxLTcyMmZkMmMxN2I0NCIsImMiOjh9&embedImagePlaceholder=true&pageName=11e0fdef3acdca11509a)
 
 ## Business Task
 The director of marketing at Cyclistic has identified that maximizing the number of annual memberships is critical to the company’s future growth. The key objective is to understand the differences in bike usage patterns between casual riders (those who purchase single-ride or full-day passes) and annual members. Insights from this analysis will inform strategies aimed at encouraging casual riders to become annual members.
