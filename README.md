@@ -94,13 +94,40 @@ Hours of the Day: Members display two distinct peaks in their trip activity: one
 
 Based on these observations, it can be inferred that members likely use bikes primarily for commuting to and from work on weekdays, while casual riders tend to use bikes throughout the day, especially on weekends, likely for leisure activities. Both groups show peak activity during the spring and summer seasons.
 
+### Average ride duration by period
+![image](https://github.com/user-attachments/assets/1a94a58f-8ffc-4de1-985a-d4aeca9cab51)
 
+Casual riders generally cycle for longer durations compared to members, with the average trip length for members remaining consistent throughout the year, week, and day. In contrast, casual riders display notable variability in their trip lengths. They tend to ride longer distances during spring and summer, especially on weekends and between 10 AM and 2 PM, likely for recreational purposes. Conversely, their trips are shorter during early morning hours (5–8 AM), aligning with potential commuting behavior.
 
-
-
-
-
-
-
+These observations suggest that casual riders travel less frequently but for significantly longer durations, approximately twice as long as members on average. The extended trips during non-commuting hours, weekends, and warmer months reinforce the idea that casual riders primarily use bikes for leisure rather than daily transportation.
 ## Share
+![image](https://github.com/user-attachments/assets/7c929073-c9dd-4496-8ede-a5ed2321dd96)
+[View dashboard](https://app.powerbi.com/view?r=eyJrIjoiMjM0NjgxNzktODNlNS00YzgxLWI0MzItYzVkNWFjZDVmZDkzIiwidCI6ImFmNDAxOTMwLTYyZWUtNDIwMC05NDYxLTcyMmZkMmMxN2I0NCIsImMiOjh9&embedImagePlaceholder=true&pageName=11e0fdef3acdca11509a)
+
+The similarities and differences between Cyclistic members and casual riders are summarized as follows based on the dashboard analysis:
+
+### Similarities:
+Seasonal Preferences: Both groups favor riding bicycles during spring and summer (May to September). However, ride numbers decline starting in September, likely due to colder temperatures making rides less comfortable
+
+Bike Type Preference: Both groups prefer classic bicycles over electric ones
+Weekend Rides: Average ride durations are higher on weekends for both groups compared to weekdays
+
+### Differences:
+Frequency of Rides: Cyclistic members take significantly more rides compared to casual riders
+
+Trip Length: Members have a shorter average ride duration (12.46 minutes) compared to casual riders (23.50 minutes), suggesting that members often use bicycles for short, practical trips, such as commuting or running errands
+
+Activity Patterns: Members show consistent ride activity throughout the week, indicating routine usage. In contrast, casual riders are most active on weekends and less active on weekdays, implying that their rides are more recreational or leisure-oriented
+
+These findings highlight the distinct usage patterns between the two groups, helping tailor strategies to meet their specific needs and preferences
 ## Act
+To convert casual riders into Cyclistic members:
+
+1. Flexible Membership Plans: Offer annual, monthly, and daily options (e.g., $365/year, $45/month, $3/day) to cater to diverse user needs
+2. Group Discounts: Provide deals for families, students, and friends to promote group memberships
+3. Loyalty Program: Reward frequent rides with points redeemable for discounts or free rides to encourage regular use
+4. Exclusive Events: Host members-only activities like group rides or themed challenges to build community and attract casual riders
+5. Seasonal Promotions: Launch spring and summer campaigns offering discounts or extended ride times to drive membership sign-ups
+6. Social Media Engagement: Highlight member benefits, testimonials, and cycling experiences to inspire casual riders to join
+
+In a conclusions Cyclistic can successfully increase memberships and foster loyalty by tailoring strategies to user behaviors and preferences
