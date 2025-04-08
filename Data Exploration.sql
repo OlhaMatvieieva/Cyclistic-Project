@@ -2,63 +2,78 @@
 
 -- checking for number of null values
 
-SELECT COUNT(*) - COUNT(ride_id) ride_id
-  ,COUNT(*) - COUNT(rideable_type) rideable_type
-  ,COUNT(*) - COUNT(started_at) started_at
-  ,COUNT(*) - COUNT(ended_at) ended_at
-  ,COUNT(*) - COUNT(start_station_name) start_station_name
-  ,COUNT(*) - COUNT(start_station_id) start_station_id
-  ,COUNT(*) - COUNT(end_station_name) end_station_name
-  ,COUNT(*) - COUNT(end_station_id) end_station_id
-  ,COUNT(*) - COUNT(start_lat) start_lat
-  ,COUNT(*) - COUNT(start_lng) start_lng
-  ,COUNT(*) - COUNT(end_lat) end_lat
-  ,COUNT(*) - COUNT(end_lng) end_lng
-  ,COUNT(*) - COUNT(member_casual) member_casual
+SELECT 
+    COUNTIF(ride_id IS NULL) AS ride_id_nulls,
+    COUNTIF(rideable_type IS NULL) AS rideable_type_nulls,
+    COUNTIF(started_at IS NULL) AS started_at_nulls,
+    COUNTIF(ended_at IS NULL) AS ended_at_nulls,
+    COUNTIF(start_station_name IS NULL) AS start_station_name_nulls,
+    COUNTIF(start_station_id IS NULL) AS start_station_id_nulls,
+    COUNTIF(end_station_name IS NULL) AS end_station_name_nulls,
+    COUNTIF(end_station_id IS NULL) AS end_station_id_nulls,
+    COUNTIF(start_lat IS NULL) AS start_lat_nulls,
+    COUNTIF(start_lng IS NULL) AS start_lng_nulls,
+    COUNTIF(end_lat IS NULL) AS end_lat_nulls,
+    COUNTIF(end_lng IS NULL) AS end_lng_nulls,
+    COUNTIF(member_casual IS NULL) AS member_casual_nulls
 FROM `dotted-forest-437921-f3.Cyclistic.join_data`;
 
 -- checking for duplicate rows
 
-SELECT COUNT(ride_id) - COUNT(DISTINCT ride_id) AS duplicate_rows
-FROM `dotted-forest-437921-f3.Cyclistic.join_data`;
+WITH duplicates AS (
+    SELECT ride_id, COUNT(*) AS occurrences
+    FROM `dotted-forest-437921-f3.Cyclistic.join_data`
+    GROUP BY ride_id
+    HAVING COUNT(*) > 1
+)
+SELECT ride_id, occurrences
+FROM duplicates
+ORDER BY occurrences DESC;
 
 -- the ride_id is consistent with 16 characters
 
-SELECT LENGTH(ride_id) AS length_ride_id
-  ,COUNT(ride_id) AS nmb_of_rows
+SELECT ride_id
 FROM `dotted-forest-437921-f3.Cyclistic.join_data`
-GROUP BY length_ride_id;
+WHERE LENGTH(ride_id) <> 16;
 
 -- rideable_type determine the type of bikes 
 
-SELECT DISTINCT rideable_type
-  ,COUNT(rideable_type) AS nmb_of_trips
+SELECT rideable_type, COUNT(*) AS trip_count
 FROM `dotted-forest-437921-f3.Cyclistic.join_data`
-GROUP BY rideable_type;
+GROUP BY rideable_type
+ORDER BY trip_count DESC;
 
 -- started_at, ended_at ride duration
 
-SELECT ride_id
-  ,started_at
-  ,ended_at
-FROM `dotted-forest-437921-f3.Cyclistic.join_data`
-WHERE 
-TIMESTAMP_DIFF(ended_at, started_at, MINUTE) <= 1 OR
-TIMESTAMP_DIFF(ended_at, started_at, MINUTE) >= 1440;
+WITH ride_cats AS (
+  SELECT 
+    CASE 
+      WHEN TIMESTAMP_DIFF(ended_at, started_at, MINUTE) <= 1 THEN 'Too Short'
+      WHEN TIMESTAMP_DIFF(ended_at, started_at, MINUTE) >= 1440 THEN 'Too Long'
+      ELSE 'Normal'
+    END AS ride_category
+  FROM `dotted-forest-437921-f3.Cyclistic.join_data`
+)
+SELECT ride_category, COUNT(*) AS count
+FROM ride_cats
+GROUP BY ride_category;
 
 -- name & id of start_station and end_station
-SELECT DISTINCT start_station_name
-  ,COUNT(*) AS start_station_count
+SELECT start_station_name, COUNT(*) AS start_station_count
 FROM `dotted-forest-437921-f3.Cyclistic.join_data`
-GROUP BY start_station_name;
+WHERE start_station_name IS NOT NULL
+GROUP BY start_station_name
+ORDER BY start_station_count DESC
+LIMIT 10;
 
-SELECT DISTINCT end_station_name
-  ,COUNT(*) AS end_station_count
+SELECT end_station_name, COUNT(*) AS end_station_count
 FROM `dotted-forest-437921-f3.Cyclistic.join_data`
-GROUP BY end_station_name;
+WHERE end_station_name IS NOT NULL
+GROUP BY end_station_name
+ORDER BY end_station_count DESC
+LIMIT 10;
 
-SELECT DISTINCT start_station_id
-  ,end_station_id
+SELECT DISTINCT start_station_id, end_station_id
 FROM `dotted-forest-437921-f3.Cyclistic.join_data`
 WHERE start_station_id IS NOT NULL OR
 end_station_id IS NOT NULL;
@@ -73,7 +88,6 @@ end_lat IS NULL OR
 end_lng IS NULL;
 
 -- member_casual type of membership 
-SELECT member_casual
-  ,COUNT(*) as membership_count
+SELECT member_casual, COUNT(*) as membership_count
 FROM `dotted-forest-437921-f3.Cyclistic.join_data`
 GROUP BY member_casual;
